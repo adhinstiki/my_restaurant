@@ -1,107 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+body {
+  font-family: var(--text-font);
+}
+
 :root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+  --primary-color: #bb9f5d;
+  --text-dark: #000000;
+  --text-grey: #777777;
+  --text-font: "Open Sans", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
+.navbar .container {
+  padding: 20px 0;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+.logo img {
+  width: 200px;
+  height: auto;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-a {
-  color: inherit;
+.nav-item {
+  font-size: 14pt;
+  font-family: var(--text-font);
+  color: var(--text-dark);
+  font-weight: 600;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.navbar-nav {
+  gap: 50px;
+}
+
+#nav-item-dropdown::after {
+  font-family: "Font Awesome 5 Free";
+  display: inline;
+  content: "\f107";
+  float: right;
+  margin-left: 8px;
+  margin-top: 2px;
+}
+
+.navbar-right svg {
+  width: 30px;
+  height: auto;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.header {
+  background-image: url("/images/homepage.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+.header p {
+  font-size: 18px;
+}
+
+.features {
+  margin: 80px 0;
+}
+
+.left-column {
+  display: flex;
+  justify-content: center;
+}
+
+.image-content {
+  width: 100%;
+  margin-right: 4%;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.right-column h1 {
+  font-size: 35px;
+  width: auto;
+}
+
+.right-column h2 {
+  color: var(--text-grey);
+  font-size: 18px;
+  font-weight: 300;
+  margin: 30px 0;
+}
+
+hr {
+  display: inline-block;
+  width: 70px;
+  margin: 25px 0 20px 0;
+  clear: both;
+  border-top: 3px solid var(--text-dark) !important;
+  opacity: 100 !important;
+}
+
+.right-column p {
+  font-size: 18px;
+  text-indent: 50px;
+  font-weight: 400;
+}
+
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+.parallax-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background-image: url("/images/cakes.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.parallax-content h1 {
+  font-size: 50px;
+}
+
+.parallax-content p {
+  font-size: 18px;
+}
+
+.card-container {
+  margin-bottom: 10px;
+}
+
+.card-image {
+  padding: 10px 10px;
+  margin-bottom: 20px;
+  position: relative;
+  transition: bottom 0.5s;
+  cursor: pointer;
+}
+
+.btn-action svg {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: auto;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.66);
+  padding: 30px;
+  border-radius: 8px;
+  transition: opacity 0.5s;
+}
+
+.card-image:hover {
+  bottom: 0; /* Menggeser tombol ke atas saat di-hover */
+}
+
+.card-image:hover + .btn-action svg {
+  opacity: 1; /* Menampilkan tooltip saat tombol di-hover */
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+}
+
+.menu-post {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-title {
+  font-size: 25px;
+}
+
+.menu-price {
+  font-size: 30px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.post-detail {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.menu-highlight {
+  font-size: 12px;
+  color: white;
+  background-color: var(--primary-color);
+  padding: 5px 14px;
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+  .image-content {
+    margin-bottom: 30px !important;
+  }
+}
+
+/* Smartphone */
+@media only screen and (max-width: 480px) {
+  .image-content {
+    margin-bottom: 30px !important;
+  }
+
+  .right-column {
+    padding-inline: 30px !important;
   }
 }
